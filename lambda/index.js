@@ -153,7 +153,7 @@ exports.handler = Alexa.SkillBuilders.custom()
         SessionEndedRequestHandler,
         IntentReflectorHandler, // make sure IntentReflectorHandler is last so it doesn't override your custom intent handlers
     )
-    .addRequestInterceptor(
+    .addRequestInterceptors(
                 LocalisationRequestInterceptor,
     )
     .addErrorHandlers(
