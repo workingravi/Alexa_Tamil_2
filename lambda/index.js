@@ -20,7 +20,7 @@ const languageStrings = {
         translation: {
             //WELCOME_MSG: 'आइए ',
             WELCOME_MSG: 'Vango! Eppidi irukkel?',
-            LOVE_MSG: 'Naanum Unnai lovvu panren',
+            LOVE_MSG: '<amazon:effect name="whispered">Naanum Unnai lovvu panren</amazon:effect>',
             HELLO_MSG: 'Vanakkam',
             HELP_MSG: 'Eppidi udavi say atum ?',
             REFLECTOR_MSG: 'You just triggered {{intent}}',
