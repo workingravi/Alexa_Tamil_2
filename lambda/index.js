@@ -20,7 +20,7 @@ const languageStrings = {
         translation: {
             //WELCOME_MSG: 'आइए ',
             WELCOME_MSG: 'Vango! Eppidi irukkel?',
-            
+            LOVE_MSG: 'Naanum Unnai lovvu pannaren',
             HELLO_MSG: 'Vanakkam',
             HELP_MSG: 'Eppidi udavi say atum ?',
             GOODBYE_MSG: 'Parkalaam',
