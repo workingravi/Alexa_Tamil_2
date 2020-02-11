@@ -2,6 +2,7 @@
 // Please visit https://alexa.design/cookbook for additional examples on implementing slots, dialog management,
 // session persistence, api calls, and more.
 const Alexa = require('ask-sdk-core');
+const i18n = require('i18next');
 
 const LaunchRequestHandler = {
     canHandle(handlerInput) {
