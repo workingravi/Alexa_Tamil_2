@@ -23,6 +23,7 @@ const languageStrings = {
             LOVE_MSG: 'Naanum Unnai lovvu pannaren',
             HELLO_MSG: 'Vanakkam',
             HELP_MSG: 'Eppidi udavi say atum ?',
+            REFLECTOR_MSG: 'You just triggered {{intent}}',
             GOODBYE_MSG: 'Parkalaam',
             FALLBACK_MSG: 'Mannikavum. Puri yalai. Mindum try sey inguh',
             ERROR_MSG: 'Sorry. Mindum try sey inguh'
