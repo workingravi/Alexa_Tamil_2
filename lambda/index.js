@@ -18,7 +18,9 @@ const languageStrings = {
     },
     in: {
         translation: {
-            WELCOME_MSG: 'Vango! Eppidi irukkel?',
+            WELCOME_MSG: 'आइए ',
+            //WELCOME_MSG: 'Vango! Eppidi irukkel?',
+            
             HELLO_MSG: 'Vanakkam',
             HELP_MSG: 'Eppidi udavi say atum ?',
             GOODBYE_MSG: 'Parkalaam',
