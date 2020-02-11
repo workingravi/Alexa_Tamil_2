@@ -10,6 +10,7 @@ const languageStrings = {
             WELCOME_MSG: 'Welcome, you can say Hello or Help. Which would you like to try?',
             HELLO_MSG: '<amazon:effect name="whispered">Hello World!</amazon:effect>',
             HELP_MSG: 'You can say hello to me! How can I help?',
+            LOVE_MSG: '<voice name="Joey">I\'m your man! How can I help?</voice>',
             GOODBYE_MSG: 'Goodbye!',
             REFLECTOR_MSG: 'You just triggered {{intent}}',
             FALLBACK_MSG: 'Sorry, I don\'t know about that. Please try again.',
