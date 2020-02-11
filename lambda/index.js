@@ -16,7 +16,7 @@ const languageStrings = {
             ERROR_MSG: 'Sorry, there was an error. Please try again.'
         }
     },
-    in: {
+    hi: {
         translation: {
             WELCOME_MSG: 'आइए ',
             //WELCOME_MSG: 'Vango! Eppidi irukkel?',
