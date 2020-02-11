@@ -20,11 +20,11 @@ const languageStrings = {
         translation: {
             //WELCOME_MSG: 'आइए ',
             WELCOME_MSG: 'Vango! Eppidi irukkel?',
-            LOVE_MSG: 'Naanum Unnai lovvu pannaren',
+            LOVE_MSG: 'Naanum Unnai lovvu panren',
             HELLO_MSG: 'Vanakkam',
             HELP_MSG: 'Eppidi udavi say atum ?',
             REFLECTOR_MSG: 'You just triggered {{intent}}',
-            GOODBYE_MSG: 'Parkalaam',
+            GOODBYE_MSG: 'Parkuhlaam',
             FALLBACK_MSG: 'Mannikavum. Puri yalai. Mindum try sey inguh',
             ERROR_MSG: 'Sorry. Mindum try sey inguh'
         }
