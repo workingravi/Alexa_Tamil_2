@@ -4,6 +4,30 @@
 const Alexa = require('ask-sdk-core');
 const i18n = require('i18next');
 
+const languageStrings = {
+    en: {
+        translation: {
+            WELCOME_MSG: 'Welcome, you can say Hello or Help. Which would you like to try?',
+            HELLO_MSG: 'Hello World!',
+            HELP_MSG: 'You can say hello to me! How can I help?',
+            GOODBYE_MSG: 'Goodbye!',
+            REFLECTOR_MSG: 'You just triggered {{intent}}',
+            FALLBACK_MSG: 'Sorry, I don\'t know about that. Please try again.',
+            ERROR_MSG: 'Sorry, there was an error. Please try again.'
+        }
+    },
+    it: {
+        translation: {
+            WELCOME_MSG: 'Vango! Eppidi irukkel?',
+            HELLO_MSG: 'Vanakkam',
+            HELP_MSG: 'Eppidi udavi say atum ?',
+            GOODBYE_MSG: 'Parkalaam',
+            FALLBACK_MSG: 'Mannikavum. Puri yalai. Mindum try sey inguh',
+            ERROR_MSG: 'Sorry. Mindum try sey inguh'
+        }
+    }
+};
+
 const LaunchRequestHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
