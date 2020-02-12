@@ -17,7 +17,7 @@ module.exports = {
             //WELCOME_MSG: 'आइए ',
             POSITIVE_SOUND: `<audio src='soundbank://soundlibrary/ui/gameshow/amzn_ui_sfx_gameshow_positive_response_02'/>`,
             WELCOME_MSG: 'Vango! Eppidi irukkel?',
-            LOVE_MSG: '<amazon:effect name="whispered">Naanum Unnai lovvu panren</amazon:effect>',
+            LOVE_MSG: '<amazon:effect name="whispered">Naanum Unnai lovvu panren, {{ name}}</amazon:effect>',
             HELLO_MSG: 'Vanakkam',
             HELP_MSG: 'Eppidi udhavi sei atum ?',
             REFLECTOR_MSG: 'You just triggered {{intent}}',
