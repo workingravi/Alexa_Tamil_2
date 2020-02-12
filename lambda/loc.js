@@ -1,6 +1,7 @@
 module.exports = {
     en: {
         translation: {
+            POSITIVE_SOUND: `<audio src='soundbank://soundlibrary/ui/gameshow/amzn_ui_sfx_gameshow_positive_response_02'/>`,
             WELCOME_MSG: 'Welcome, you can say Hello or Help. Which would you like to try?',
             HELLO_MSG: '<amazon:effect name="whispered">Hello World!</amazon:effect>',
             HELP_MSG: 'You can say hello to me! How can I help?',
@@ -14,6 +15,7 @@ module.exports = {
     hi: {
         translation: {
             //WELCOME_MSG: 'आइए ',
+            POSITIVE_SOUND: `<audio src='soundbank://soundlibrary/ui/gameshow/amzn_ui_sfx_gameshow_positive_response_02'/>`,
             WELCOME_MSG: 'Vango! Eppidi irukkel?',
             LOVE_MSG: '<amazon:effect name="whispered">Naanum Unnai lovvu panren</amazon:effect>',
             HELLO_MSG: 'Vanakkam',
