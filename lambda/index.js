@@ -12,6 +12,8 @@ const LaunchRequestHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
     },
     handle(handlerInput) {
+        const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+        const name = sessionAttributes['name'] || '';
         const speakOutput = handlerInput.t('WELCOME_MSG');
         return handlerInput.responseBuilder
             .speak(speakOutput)
