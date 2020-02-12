@@ -14,7 +14,7 @@ const LaunchRequestHandler = {
     handle(handlerInput) {
         const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
         const name = sessionAttributes['name'] || '';
-        const speakOutput = handlerInput.t('WELCOME_MSG');
+        const speakOutput = handlerInput.t('WELCOME_MSG', {name:name});
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .reprompt(speakOutput)
