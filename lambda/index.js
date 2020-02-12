@@ -40,7 +40,7 @@ const LoveYouIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'LoveYouIntent';
     },
     handle(handlerInput) {
-        const speakOutput = handlerInput.t('LOVE_MSG');
+        const speakOutput = handlerInput.t('LOVE_MSG', {name:name});
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .reprompt(speakOutput)
