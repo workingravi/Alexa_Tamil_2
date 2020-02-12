@@ -23,7 +23,7 @@ const languageStrings = {
             WELCOME_MSG: 'Vango! Eppidi irukkel?',
             LOVE_MSG: '<amazon:effect name="whispered">Naanum Unnai lovvu panren</amazon:effect>',
             HELLO_MSG: 'Vanakkam',
-            HELP_MSG: 'Eppidi udavi say atum ?',
+            HELP_MSG: 'Eppidi udhavi sei atum ?',
             REFLECTOR_MSG: 'You just triggered {{intent}}',
             GOODBYE_MSG: 'Parkuhlaam',
             FALLBACK_MSG: 'Mannikavum. Puri yalai. Mindum try sey inguh',
