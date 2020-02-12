@@ -40,6 +40,8 @@ const LoveYouIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'LoveYouIntent';
     },
     handle(handlerInput) {
+        const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+        const name = sessionAttributes['name'] || '';
         const speakOutput = handlerInput.t('LOVE_MSG', {name:name});
         return handlerInput.responseBuilder
             .speak(speakOutput)
