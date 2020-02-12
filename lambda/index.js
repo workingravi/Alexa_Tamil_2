@@ -3,7 +3,9 @@
 // session persistence, api calls, and more.
 const Alexa = require('ask-sdk-core');
 const i18n = require('i18next');
-const languageStrings = require('loc');
+const languageStrings = require('./loc');
+const GIVEN_NAME_PERMISSION = ['alexa::profile:given_name:read'];
+
 
 const LaunchRequestHandler = {
     canHandle(handlerInput) {
