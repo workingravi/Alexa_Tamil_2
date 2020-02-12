@@ -137,6 +137,36 @@ const ErrorHandler = {
     }
 };
 
+const LoadNameRequestInterceptor = {
+    async process(handlerInput) {
+        const {attributesManager, serviceClientFactory, requestEnvelope} = handlerInput;
+        const sessionAttributes = attributesManager.getSessionAttributes();
+        if (!sessionAttributes['name']){
+            // let's try to get the given name via the Customer Profile API
+            // don't forget to enable this permission in your skill configuratiuon (Build tab -> Permissions)
+            // or you'll get a SessionEndedRequest with an ERROR of type INVALID_RESPONSE
+            // Per our policies you can't make personal data persistent so we limit "name" to session attributes
+            try {
+                const {permissions} = requestEnvelope.context.System.user;
+                if (!(permissions && permissions.consentToken))
+                    throw { statusCode: 401, message: 'No permissions available' }; // there are zero permissions, no point in intializing the API
+                const upsServiceClient = serviceClientFactory.getUpsServiceClient();
+                const profileName = await upsServiceClient.getProfileGivenName();
+                if (profileName) { // the user might not have set the name
+                    //save to session attributes
+                    sessionAttributes['name'] = profileName;
+                }
+            } catch (error) {
+                console.log(JSON.stringify(error));
+                if (error.statusCode === 401 || error.statusCode === 403) {
+                    // the user needs to enable the permissions for given name, let's append a permissions card to the response.
+                    handlerInput.responseBuilder.withAskForPermissionsConsentCard(GIVEN_NAME_PERMISSION);
+                }
+            }
+        }
+    }
+};
+
 // This request interceptor will bind a translation function 't' to the handlerInput
 const LocalisationRequestInterceptor = {
     process(handlerInput) {
@@ -165,6 +195,7 @@ exports.handler = Alexa.SkillBuilders.custom()
     )
     .addRequestInterceptors(
                 LocalisationRequestInterceptor,
+                LoadNameRequestInterceptor,
     )
     .addErrorHandlers(
         ErrorHandler,
